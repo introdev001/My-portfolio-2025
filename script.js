@@ -8,6 +8,13 @@ let body = document.querySelector("body")
 // side bar
 let navBtn = document.querySelector("#nav-btn")
 let sideBar = document.querySelector("#side-bar")
+// side links
+let sideBarlinks = document.querySelectorAll(".side-links")
+let sideHomelink = document.querySelector("#side-home-btn")
+// side bar chat btn
+let sideChatbtn = document.querySelector("#side-chat-btn")
+// if statement for removing wel come msg on small screens
+
 if(window.innerHeight > 480){
     setTimeout(() => {
     welText.style.opacity = "0"
@@ -20,25 +27,34 @@ welText.addEventListener("transitionend" , () => {
    textcont.classList.add("active")
    
 }) 
-}else{
-    console.log("Can't enable animations for better user expirence")
 }
-
-
 // event for side bar
 navBtn.addEventListener("click" , () => {
     sideBar.classList.toggle("side-active")
     navBtn.classList.toggle("activeX")
+       setTimeout(() => {
+        sideHomelink.classList.toggle("appear")
+     },1000)
+     sideBarlinks.forEach(link => {
+        setTimeout(() => {
+        link.classList.toggle("appear")
+     } , 1200)
+     })
+     setTimeout(() => {
+        sideChatbtn.classList.toggle("slideinbomp")
+     },1300)
+}) 
+
+// event for side bar self closing
+sideBarlinks.forEach(link => {
+    link.addEventListener("click" , () => {
+        sideBar.classList.remove("side-active")
+        navBtn.classList.remove("activeX")
+    })
 })
-//  @media screen and (min-width:1176px) and (max-width:1280px){
-//     /* projects cont */
-//     #projects-cont {
-//     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-// }
-// }
-// @media screen and (min-width:1576px) {
-//     /* projects cont */
-//     #projects-cont {
-//     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-// }
-// }
+
+sideHomelink.addEventListener("click" , () => {
+        sideBar.classList.remove("side-active")
+        navBtn.classList.remove("activeX")
+
+    })

@@ -80,7 +80,6 @@ nav a:hover{
 }
 #chat-btn:hover{
     background-color: var(--btn-hover);
-     
     color: white;
 }
 #arrow{
@@ -132,7 +131,7 @@ transform: translateX(10px);
 }
 /* hero section */
 #hero-section{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     justify-content: space-around;
@@ -384,7 +383,7 @@ animation-range: entry 0% cover 30%;
     border-radius: 10px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1rem;
+    gap: 1.3rem;
     width: 100%;
 }
  /* projects for left side slide */
@@ -394,6 +393,8 @@ animation-range: entry 0% cover 30%;
     animation-range: entry 0% cover 10%;
     font-size: 0.6rem;
     transition: all 0.5s;
+    padding: 0;
+    position: relative;
  }
   #project4{
     animation: leftslideprojects 2s linear;
@@ -479,9 +480,62 @@ animation: pulse 2s infinite;
     font-size: 1.2rem;
 color: var(--act--icon);
 }
+/* project 1 img */
+#digiting-site-img{
+    width: 100%;
+    border-radius: 8px;
+    height: 100%;
+    
+}
+#project1::after{
+content: "";
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    border-radius: 8px;
+}
+#view-live{
+   position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-70%, -50%);
+    text-decoration: none;
+    color: var(--ace-co);
+    z-index: 2;
+    font-size: 2em;
+   transition: all 0.5s;
+     opacity: 0;
+}
+#view-live-arrow{
+        color: var(--ace-co);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(200%, -50%);
+    z-index: 2;
+    animation: none;
+    font-size: 2em;
+    transition: all 0.5s;
+    opacity: 0;
+}
+@media (hover: hover){
+    #project1:hover::after{
+    opacity: 1;
+}
+#project1:hover #view-live-arrow{
+    opacity: 1;
+} 
+#project1:hover #view-live{
+    opacity: 1;
+} 
+}
 footer{
     width: 100%;
-    min-height: 250px;
+    height: auto;
     padding: 1em;
     color: var(--sec-text);
     background-color: var(--main-bg);
@@ -516,6 +570,8 @@ footer{
         display: flex;
     flex-direction: column;
     gap: 5px;
+    padding: 0;
+    align-items: center;
 }
 #quick-links li a{
     text-decoration: none;
@@ -570,10 +626,10 @@ display: flex;
 }
 /* x transfromation */
 #nav-btn.activeX div:nth-child(1){
-transform: rotate(40deg) translateX(5px);
+transform: rotate(40deg) translateX(4px);
 }
 #nav-btn.activeX div:nth-child(2){
-    transform: rotate(-40deg)translateX(5px);
+    transform: rotate(-50deg)translateX(4px);
 }
 #nav-btn.activeX div:nth-child(3){
     opacity: 0;
@@ -583,8 +639,7 @@ transform: rotate(40deg) translateX(5px);
 #side-bar{
     flex-direction: column;
     height: 100vh;
-    width: 50vw;
-    max-width: 300px;
+    width: 100vw;
     background-color: var(--nav-bg);
     display: flex;
     justify-content: space-between;
@@ -593,7 +648,7 @@ transform: rotate(40deg) translateX(5px);
     top: 0px;
     right: 0;
     z-index: 2;
-    font-size: 16px;
+    font-size: 20px;
     padding: 1em;
     border-left: 1px solid var(--sec-text);
     box-shadow: 0 0 10px var(--sec-text);
@@ -613,17 +668,34 @@ transform: translateX(0);
     display: flex;
     flex-direction: column;
     list-style: none;
-    gap: 1em;
+    gap: 15px;
+    overflow: hidden;
 }
 .side-links{
     text-decoration: none;
     color: var(--prim-text);
+    transform: translateY(200px);
+    display: inline-block;
+    opacity: 0;
+    transition: all 1.6s;
 }
 #side-home-btn{
     text-decoration: none;
     color: var(--ace-co);
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(200px);
+    transition: all 1.2s;
 }
-
+/* animation for side bar links */
+.side-links.appear{
+    transform: translateY(0px);
+     opacity: 1;
+}
+#side-home-btn.appear{
+    transform: translateY(0px);
+    opacity: 1;
+}
 /* hover animation for chat btn */
 #side-chat-btn{
     padding: 10px 20px;
@@ -633,6 +705,22 @@ transform: translateX(0);
     transition: all 0.5s;
     text-decoration: none;
     color: white;
+    width: 200px;
+    transform: translateY(calc(100% + 50px));
+}
+#side-chat-btn.slideinbomp{
+    animation: slideinbomp 0.7s linear forwards;
+}
+@keyframes slideinbomp{
+    0%{
+        transform: translateY(calc(100% + 50px));
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
 }
 @media screen and (min-width:0px) and (max-width:480px){
     /* univarsal */
@@ -716,7 +804,7 @@ nav{
 #projects-cont{
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 20px 0px;
     font-size: 10px;
 }
 #project1,#project2,#project3,#project4,#project5,#project6{
@@ -728,9 +816,9 @@ nav{
 }
 /* footer */
 footer {
-    min-height: 150px;
     animation: none;
     font-size: 8px;
+    padding: 10px;
 }
 }
 /* mobile(lager one's) */
@@ -751,7 +839,7 @@ nav{
 }
 /* side bar */
 #side-bar{
-    width: 200px;
+    width: 300px;
 }
 #side-bar , #nav-btn{
     display: flex;
@@ -807,12 +895,17 @@ nav{
 }
 /* footer */
 footer {
-    min-height: 150px;
     animation: none;
     font-size: 10px;
 }
 }
 /* Tablets */
+@media screen and (min-width:601px) and (max-width:642px){
+    /* projects cont */
+    #projects-cont{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
 @media screen and (min-width:601px) and (max-width:768px){
     /* html */
     html{
@@ -866,8 +959,7 @@ footer {
     }
     /* footer */
     footer{
-        font-size: 0.9rem;
-        min-height: 200px;
+        font-size: 0.7rem;
     animation-range: entry 0% cover 20%;
     }
     /* projects cont */
@@ -960,12 +1052,15 @@ footer {
     }
     /* footer */
     footer{
-        font-size: 1.1rem;
-        min-height: 200px;
+        font-size: 1rem;
         animation-range: entry 0% cover 25%;
     }
 }
 @media screen and (min-width:964px) and (max-width:1024px){
+    /* html */
+    html{
+        font-size: 11px;
+    }
     /* project cont */
     #projects-cont{
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -975,7 +1070,7 @@ footer {
 @media screen and (min-width:1025px) and (max-width:1264px){
     /* html */
     html{
-        font-size: 17px;
+        font-size: 12px;
     }
     /* nav , hero section*/
     nav{
@@ -1022,10 +1117,6 @@ footer {
     /* project 4 */
     #project4{
         animation-range: entry 0% cover 20%;
-    }
-    /* footer */
-    footer{
-        min-height: 200px;
     }
 }
 @media screen and (min-width:1265px) and (max-width:1280px){
