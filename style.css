@@ -28,7 +28,7 @@ body.light-theme{
 /* universal selector */
 *{
     box-sizing: border-box;
-    font-family: "Inter" , sans-serif;
+    font-family: "poppins" , sans-serif;
 }
 /* html & body */
 body,html{
@@ -532,7 +532,7 @@ content: "";
 #phone-link-cont{
     right: 10px;
     top: 10px;
-    width: 100px;
+    width: 130px;
     padding: 10px;
     border-radius: 20px;
     position: absolute;
@@ -542,7 +542,7 @@ content: "";
     z-index: 1;
     border: 1px solid #434343;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: start;
 }
 #phone-view-live{
