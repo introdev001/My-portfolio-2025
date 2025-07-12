@@ -38,6 +38,7 @@ body,html{
     padding: 0;
     background-color: var(--main-bg);
     overflow-x: hidden;
+    scroll-behavior: smooth
 }
 /* main */
 #main{
@@ -327,6 +328,10 @@ animation-range: entry 0% cover 30%;
 #services p{
     color: var(--sec-text);
 }
+#services-cont h2{
+    text-align: center;
+    color: var(--prim-text);
+}
 /* cards */
 .cards{
     width: 30%;
@@ -407,6 +412,10 @@ animation-range: entry 0% cover 30%;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.3rem;
     width: 100%;
+}
+#projects-heading{
+    text-align: center;
+    color: var(--prim-text);
 }
  /* projects for left side slide */
  #project1{
@@ -520,40 +529,33 @@ content: "";
     opacity: 0;
     border-radius: 8px;
 }
-#view-live{
-   position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-70%, -50%);
-    text-decoration: none;
-    color: var(--ace-co);
-    z-index: 2;
-    font-size: 2em;
-   transition: all 0.5s;
-     opacity: 0;
-}
-#view-live-arrow{
-        color: var(--ace-co);
+#phone-link-cont{
+    right: 10px;
+    top: 10px;
+    width: 100px;
+    padding: 10px;
+    border-radius: 20px;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(200%, -50%);
-    z-index: 2;
-    animation: none;
-    font-size: 2em;
-    transition: all 0.5s;
-    opacity: 0;
+    background-color: rgb(255 255 255 / 0.8%);
+    backdrop-filter: blur(10px);
+    min-height: 70px;
+    z-index: 1;
+    border: 1px solid #434343;
+    display: flex;
+    justify-content: center;
+    align-items: start;
 }
-@media (hover: hover){
-    #project1:hover::after{
-    opacity: 1;
+#phone-view-live{
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
 }
-#project1:hover #view-live-arrow{
-    opacity: 1;
-} 
-#project1:hover #view-live{
-    opacity: 1;
-} 
+#phone-view-live-arrow{
+    font-size: 1.5rem;
+        background-color: black;
+        padding: 5px;
+        border-radius: 50%;
+        color: white;
 }
 footer{
     width: 100%;
@@ -567,6 +569,10 @@ footer{
     font-size: 0.9rem;
     font-weight: 400;
 
+}
+#email{
+    text-decoration: none;
+    color: var(--prim-text);
 }
 /* footer animation */
 @keyframes slideup{
@@ -660,7 +666,7 @@ transform: rotate(45deg) translateX(7px);
 /* mobile view */
 #side-bar{
     flex-direction: column;
-    height: 100vh;
+    height: 100dvh;
     width: 100vw;
     background-color: var(--nav-bg);
     display: flex;
@@ -908,6 +914,7 @@ nav{
 }
 #project1,#project2,#project3,#project4,#project5,#project6{
     animation: none;
+    height: 200px;
 }
 /* projects icons */
 .projects i{
@@ -925,6 +932,12 @@ footer {
  /* univarsal */
 body , html{
     font-size: 12px;
+}
+#phone-view-live {
+    font-size: 1.6rem;
+}
+#phone-view-live-arrow {
+    font-size: 1.3rem;
 }
     /* main nav */
 nav{
@@ -1096,7 +1109,12 @@ footer {
      #project1,#project3,#project5,#project6{
         animation-range: entry 0% cover 30%;
      }
-    
+    #phone-view-live {
+    font-size: 1.5rem;
+    }
+    #phone-view-live-arrow {
+    font-size: 1.2rem;
+    }
 }
 /* Small laptop  */
 @media screen and (min-width:769px) and (max-width:963px){
@@ -1156,6 +1174,12 @@ footer {
     #working{
         font-size: 2rem;
     }
+    #phone-view-live {
+    font-size: 2rem;
+    }
+    #phone-view-live-arrow {
+    font-size: 1.5rem;
+    }
     /* footer */
     footer{
         font-size: 1rem;
@@ -1170,6 +1194,12 @@ footer {
     /* project cont */
     #projects-cont{
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    #phone-view-live {
+    font-size: 2rem;
+    }
+    #phone-view-live-arrow {
+    font-size: 1.5rem;
     }
 }
 /* larger screens */
@@ -1224,6 +1254,12 @@ footer {
     #project4{
         animation-range: entry 0% cover 20%;
     }
+    #phone-view-live {
+    font-size: 1.8rem;
+    }
+    #phone-view-live-arrow {
+    font-size: 1.5rem;
+    }
 }
 @media screen and (min-width:1265px) and (max-width:1280px){
     /* html */
@@ -1259,6 +1295,12 @@ footer {
     /* project 4 */
     #project4{
         animation-range: entry 0% cover 20%;
+    }
+    #phone-view-live {
+    font-size: 1.2rem;
+    }
+    #phone-view-live-arrow {
+    font-size: 1.1rem;
     }
 }
 /* stoping from stretching */

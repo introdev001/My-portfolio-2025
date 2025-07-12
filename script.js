@@ -45,16 +45,16 @@ navBtn.addEventListener("click" , () => {
     navBtn.classList.toggle("activeX")
        setTimeout(() => {
         sideHomelink.classList.toggle("appear")
-     },700)
+     },600)
      sideBarlinks.forEach(link => {
         setTimeout(() => {
         link.classList.toggle("appear")
-     } , 800)
+     } , 700)
      })
      setTimeout(() => {
         sideChatbtn.classList.toggle("slideinbomp")
         sidethemeSwitcherBtn.classList.toggle("slideinbomp")
-     },900)
+     },800)
 }) 
 
 // event for side bar self closing
