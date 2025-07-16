@@ -49,7 +49,7 @@ if (window.innerHeight > 480) {
     navBtn.classList.add("active");
     imgcont.classList.add("active");
     textcont.classList.add("active");
-    body.style.overflowY = "visible";
+    body.style.overflowY = "auto";
   });
 }
 // event for side bar
