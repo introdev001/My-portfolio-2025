@@ -44,6 +44,10 @@ body {
   background-color: var(--main-bg);
   overflow-x: clip;
 }
+/* for hidding scroll bar intial */
+body.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
 /* content */
 
 #content {

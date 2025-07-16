@@ -35,7 +35,7 @@ body.addEventListener("mousemove", (e) => {
   circle.style.transform = `translateX(${X}px) translateY(${Y}px)`;
 });
 window.addEventListener("load", () => {
-  body.style.overflowY = "hidden";
+  body.classList.add("hide-scroll");
 });
 // if statement for removing wel come msg on small screens
 
@@ -49,7 +49,7 @@ if (window.innerHeight > 480) {
     navBtn.classList.add("active");
     imgcont.classList.add("active");
     textcont.classList.add("active");
-    body.style.overflowY = "auto";
+    body.classList.remove("hide-scroll");
   });
 }
 // event for side bar
