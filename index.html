@@ -15,6 +15,10 @@
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
     <link rel="shortcut icon" href="Logo.png" type="image/x-icon" />
     <title>Portfolio</title>
   </head>
@@ -36,9 +40,9 @@
             <a href="#" id="chat-btn"
               >Let's Talk <i class="fa-solid fa-arrow-right" id="arrow"></i
             ></a>
-            <div id="theme-switcher">
-              <i class="fa-regular fa-moon" id="dark"></i
-              ><i class="fa-regular fa-circle" id="light"></i>
+            <div id="theme-switcher" class="expand">
+              <i class="bi bi-moon" id="dark"></i>
+              <i class="bi bi-brightness-high-fill" id="light"></i>
             </div>
           </div>
         </nav>
@@ -68,8 +72,8 @@
             ></a>
             <!-- side theme switcher -->
             <div id="side-theme-switcher">
-              <i class="fa-regular fa-moon" id="side-dark"></i>
-              <i class="fa-regular fa-circle" id="side-light"></i>
+              <i class="bi bi-moon" id="side-dark"></i>
+              <i class="bi bi-brightness-high-fill" id="side-light"></i>
             </div>
           </div>
         </div>
@@ -87,8 +91,11 @@
             <!-- text container -->
             <!-- highlight -->
             <h2>
-              Hi, I'm<span id="hightlight1" class="blend"> Honey </span>- self
-              taught<span id="hightlight2"> Frontend Developer.</span>
+              Hi, I'm<span id="hightlight1"> Honey </span>- self taught<span
+                id="hightlight2"
+              >
+                Frontend Developer.</span
+              >
             </h2>
             <!-- about paragraph -->
             <p>
@@ -113,7 +120,7 @@
         <div id="about-cont">
           <!-- About Me Text -->
           <div id="about-me">
-            <h1>About me</h1>
+            <h1 class="expand">About me</h1>
             <p>
               I'm Honey, a self-taught Frontend Developer passionate about
               crafting clean, responsive, and interactive web experiences.
@@ -129,7 +136,7 @@
         </div>
         <!-- Tech Icons -->
         <div id="tech-cont">
-          <h2>Tech I use</h2>
+          <h2 class="expand">Tech I use</h2>
           <ul id="icon-menu">
             <li><i id="html-icon" class="fab fa-html5"></i></li>
             <li><i id="css-icon" class="fab fa-css3-alt"></i></li>
@@ -141,7 +148,7 @@
       </div>
       <!-- services container -->
       <div id="services-cont">
-        <h2>Services</h2>
+        <h2 class="expand">Services</h2>
         <div id="services">
           <!-- cards -->
           <!-- card 1 -->
@@ -174,7 +181,7 @@
         </div>
       </div>
       <!-- projects -->
-      <h2 id="projects-heading">Projects</h2>
+      <h2 id="projects-heading" class="expand">Projects</h2>
       <!-- project section =============== -->
       <!-- All projects section =============================== -->
       <div id="projects">
@@ -283,8 +290,13 @@
         <!-- project 3 =============================================================================================== -->
         <div id="project-3" class="card">
           <div class="proj-main-cont" id="proj-3-main-cont">
-            <i class="fas fa-tools" id="Working" data-aos="fade-up"></i>
-            <h1 data-aos="fade-up">Working On!</h1>
+            <i
+              class="fas fa-tools"
+              id="Working"
+              data-aos="fade-up"
+              class="expand"
+            ></i>
+            <h1 data-aos="fade-up" class="expand">Working On!</h1>
           </div>
         </div>
         <!-- project 3 ends here =============================================================================================== -->
@@ -292,7 +304,7 @@
         <div id="project-4" class="card">
           <div class="proj-main-cont" id="proj-3-main-cont">
             <i class="fas fa-hourglass-half"></i>
-            <h1 data-aos="fade-up">Coming Soon...</h1>
+            <h1 data-aos="fade-up" class="expand">Coming Soon...</h1>
           </div>
         </div>
         <!-- project 4 ends here =============================================================================================== -->
@@ -300,7 +312,7 @@
         <div id="project-5" class="card">
           <div class="proj-main-cont" id="proj-5-main-cont">
             <i class="fas fa-hourglass-half"></i>
-            <h1 data-aos="fade-up">Coming Soon...</h1>
+            <h1 data-aos="fade-up" class="expand">Coming Soon...</h1>
           </div>
         </div>
         <!-- project 5 =============================================================================================== -->
@@ -308,7 +320,7 @@
         <div id="project-6" class="card">
           <div class="proj-main-cont" id="proj-6-main-cont">
             <i class="fas fa-hourglass-half"></i>
-            <h1 data-aos="fade-up">Coming Soon...</h1>
+            <h1 data-aos="fade-up" class="expand">Coming Soon...</h1>
           </div>
         </div>
         <!-- project 6 =============================================================================================== -->

@@ -26,14 +26,30 @@ let sidedarkIcon = document.querySelector("#side-dark");
 let themeSwitcherbtn = document.querySelector("#theme-switcher");
 // side theme switcher btn
 let sidethemeSwitcherBtn = document.querySelector("#side-theme-switcher");
-// name / highlight1
-let blend = document.querySelector(".blend");
+let expand = document.querySelectorAll(".expand");
+
 // circle follower logic
 body.addEventListener("mousemove", (e) => {
   let X = e.clientX;
   let Y = e.clientY;
-  circle.style.transform = `translateX(${X}px) translateY(${Y}px)`;
+  circle.style.left = X + "px";
+  circle.style.top = Y + "px";
 });
+expand.forEach((ele) => {
+  // blend/expand circle on certain links
+  ele.addEventListener("mouseenter", () => {
+    let width = ele.getBoundingClientRect().width;
+    let height = ele.getBoundingClientRect().height;
+    circle.style.width = 100 * 0.5 + "px";
+    circle.style.height = 100 * 0.5 + "px";
+  });
+
+  ele.addEventListener("mouseleave", () => {
+    circle.style.width = 10 + "px";
+    circle.style.height = 10 + "px";
+  });
+});
+
 window.addEventListener("load", () => {
   body.classList.add("hide-scroll");
 });
@@ -123,15 +139,3 @@ sidethemeSwitcherBtn.addEventListener("click", () => {
     sidedarkIcon.style.display = "inline-block";
   }
 });
-// blend mode for cursor's follower/circle
-// blend.addEventListener('mouseenter' , () => {
-//     let width = blend.getBoundingClientRect().width
-//     let height = blend.getBoundingClientRect().height
-//     console.log(`width = ${width} height = ${height}`)
-//     circle.style.width = width + 10 + "px"
-//     circle.style.height = height + 40 + "px"
-// })
-// blend.addEventListener('mouseleave' , () => {
-// circle.style.width = 10 + "px"
-//     circle.style.height = 10 + "px"
-// })

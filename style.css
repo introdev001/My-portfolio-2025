@@ -59,7 +59,7 @@ body.hide-scroll::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   background-color: var(--main-bg);
-  gap: 1em;
+  gap: 3em;
 }
 /* circle follower */
 #circle {
@@ -70,9 +70,10 @@ body.hide-scroll::-webkit-scrollbar {
   mix-blend-mode: difference;
   transition: all 0.2s linear;
   position: fixed;
-  top: -4px;
-  left: -7px;
+  top: 0;
+  left: 0;
   pointer-events: none;
+  transform: translate(-50%, -50%);
   z-index: 9998;
 }
 /* nav */
@@ -268,6 +269,7 @@ nav a:hover {
   list-style: none;
   justify-content: space-between;
   padding: 1em;
+  width: 100%;
 }
 
 #html-icon {
@@ -350,6 +352,11 @@ nav a:hover {
     transform: translateX(0px);
   }
 }
+#tech-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 /* services section */
 #services {
   width: 100%;
@@ -357,6 +364,11 @@ nav a:hover {
   display: flex;
   justify-content: space-around;
   gap: 1em;
+}
+#services-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #services h2,
 h3 {
@@ -451,7 +463,7 @@ h3 {
   width: 100%;
 }
 #projects-heading {
-  text-align: center;
+  margin: 0 auto;
   color: var(--prim-text);
 }
 /* projects for left side slide */
@@ -793,7 +805,7 @@ h5 {
 }
 
 #theme-switcher i {
-  font-size: 2em;
+  font-size: 1.4em;
   transition: all 0.4s;
   color: white;
 }
@@ -822,7 +834,7 @@ h5 {
   animation: slideinbomp 0.7s linear forwards;
 }
 #side-theme-switcher i {
-  font-size: 2em;
+  font-size: 1.5em;
   transition: all 0.4s;
   color: white;
 }
@@ -949,6 +961,9 @@ h5 {
 #proj-4-main-cont i,
 #proj-3-main-cont i {
   font-size: 1.7rem;
+}
+.expand {
+  width: fit-content;
 }
 /* projects section take two endds here==============================================================================> */
 @media screen and (min-width: 0px) and (max-width: 480px) {
@@ -1253,6 +1268,10 @@ h5 {
   #services {
     font-size: 13px;
     height: auto;
+  }
+  /* view live & hire me */
+  .proj-info-btns a {
+    font-size: 0.8rem;
   }
   /* cards icons*/
   .cards i {
