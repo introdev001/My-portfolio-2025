@@ -76,6 +76,20 @@ body.hide-scroll::-webkit-scrollbar {
   transform: translate(-50%, -50%);
   z-index: 9998;
 }
+/* pirece through */
+#pirece-through {
+  width: 60%;
+  height: 5px;
+  mix-blend-mode: difference;
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  left: 90px;
+}
+.coming-soon {
+  position: relative;
+  mix-blend-mode: difference;
+}
 /* nav */
 nav {
   width: 100%;
@@ -964,6 +978,7 @@ h5 {
 }
 .expand {
   width: fit-content;
+  mix-blend-mode: difference;
 }
 /* projects section take two endds here==============================================================================> */
 @media screen and (min-width: 0px) and (max-width: 480px) {
