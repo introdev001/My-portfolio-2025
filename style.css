@@ -79,16 +79,15 @@ body.hide-scroll::-webkit-scrollbar {
 /* pirece through */
 #pirece-through {
   width: 60%;
-  height: 5px;
-  mix-blend-mode: difference;
+  height: 1px;
   position: absolute;
   background-color: white;
   border-radius: 50%;
-  left: 90px;
+  left: 70px;
+  top: 220px;
 }
 .coming-soon {
   position: relative;
-  mix-blend-mode: difference;
 }
 /* nav */
 nav {
@@ -909,21 +908,22 @@ h5 {
 .proj-info-btns a {
   text-decoration: none;
   color: currentColor;
-  padding: 10px 10px;
+  padding: 10px 20px;
   border-radius: 50px;
   border: 1px solid var(--sec-text);
   font-size: 0.7rem;
   position: relative;
   z-index: 1;
   overflow: clip;
+  font-weight: 700;
 }
 .proj-info-btns a:after {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
-  height: 120%;
-  width: 100%;
+  left: -5px;
+  height: 150%;
+  width: 120%;
   z-index: -1;
   transform: translateY(100%);
   background-color: var(--sexy-hover);
@@ -978,7 +978,6 @@ h5 {
 }
 .expand {
   width: fit-content;
-  mix-blend-mode: difference;
 }
 /* projects section take two endds here==============================================================================> */
 @media screen and (min-width: 0px) and (max-width: 480px) {
