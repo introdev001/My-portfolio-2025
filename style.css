@@ -80,6 +80,7 @@ body.hide-scroll::-webkit-scrollbar {
 #pirece-through {
   width: 60%;
   height: 1px;
+  mix-blend-mode: difference;
   position: absolute;
   background-color: white;
   border-radius: 50%;
@@ -276,15 +277,45 @@ nav a:hover {
   color: var(--prim-text);
   text-align: center;
 }
-#icon-menu {
+.icon-menu {
   display: flex;
-  gap: 1em;
   list-style: none;
   justify-content: space-between;
-  padding: 1em;
   width: 100%;
+  animation: move 5s linear infinite;
+  padding: 4em;
 }
-
+#move {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100% 100%;
+  overflow: hidden;
+  position: relative;
+}
+#left-blur {
+  position: absolute;
+  right: 0;
+  bottom: 50px;
+  background: linear-gradient(to right, transparent, rgb(31, 31, 31));
+  width: 50px;
+  height: 60%;
+}
+#right-blur {
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+  background: linear-gradient(to left, transparent, rgb(31, 31, 31));
+  width: 50px;
+  height: 60%;
+}
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 #html-icon {
   font-size: 5rem;
   color: #e34c26;
@@ -335,7 +366,7 @@ nav a:hover {
   transition: filter 0.3s ease;
 }
 @media (hover: hover) {
-  #icon-menu li i:hover {
+  .icon-menu li i:hover {
     filter: brightness(60%);
   }
 }
@@ -605,7 +636,7 @@ h3 {
 footer {
   width: 100%;
   height: auto;
-  padding: 1em;
+  padding: 2em;
   color: var(--sec-text);
   background-color: var(--nav-bg);
   animation: slideup 2s linear;
@@ -815,10 +846,11 @@ h5 {
   align-items: center;
   justify-content: center;
   background-color: var(--ace-co);
+  font-size: 1.3em;
 }
 
 #theme-switcher i {
-  font-size: 1.4em;
+  font-size: 1.2em;
   transition: all 0.4s;
   color: white;
 }
@@ -908,22 +940,21 @@ h5 {
 .proj-info-btns a {
   text-decoration: none;
   color: currentColor;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border-radius: 50px;
   border: 1px solid var(--sec-text);
   font-size: 0.7rem;
   position: relative;
   z-index: 1;
   overflow: clip;
-  font-weight: 700;
 }
 .proj-info-btns a:after {
   content: "";
   position: absolute;
   top: 0;
-  left: -5px;
-  height: 150%;
-  width: 120%;
+  left: 0;
+  height: 120%;
+  width: 100%;
   z-index: -1;
   transform: translateY(100%);
   background-color: var(--sexy-hover);
@@ -1068,7 +1099,7 @@ h5 {
     animation: none;
   }
   /* tect used  sections's icons */
-  #icon-menu i {
+  .icon-menu i {
     font-size: 4rem;
     animation: none;
   }
@@ -1204,7 +1235,7 @@ h5 {
     animation: none;
   }
   /* tect used  sections's icons */
-  #icon-menu i {
+  .icon-menu i {
     font-size: 4rem;
     animation: none;
   }
@@ -1273,7 +1304,7 @@ h5 {
     font-size: 0.8rem;
   }
   /* tect use in project icons */
-  #icon-menu i {
+  .icon-menu i {
     font-size: 4em;
     display: flex;
     align-items: center;
@@ -1389,7 +1420,7 @@ h5 {
   #code-icon {
     font-size: 10rem;
   }
-  #icon-menu li > i {
+  .icon-menu li > i {
     font-size: 7rem;
   }
   /* cards */

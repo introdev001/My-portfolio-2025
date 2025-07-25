@@ -41,7 +41,7 @@
             <a href="#" id="chat-btn"
               >Let's Talk <i class="fa-solid fa-arrow-right" id="arrow"></i
             ></a>
-            <div id="theme-switcher">
+            <div id="theme-switcher" class="expand">
               <i class="bi bi-moon" id="dark"></i>
               <i class="bi bi-brightness-high-fill" id="light"></i>
             </div>
@@ -138,13 +138,24 @@
         <!-- Tech Icons -->
         <div id="tech-cont">
           <h2 class="expand">Tech I use</h2>
-          <ul id="icon-menu">
-            <li><i id="html-icon" class="fab fa-html5"></i></li>
-            <li><i id="css-icon" class="fab fa-css3-alt"></i></li>
-            <li><i id="js-icon" class="fab fa-js"></i></li>
-            <li><i id="react-icon" class="fab fa-react"></i></li>
-            <li><i id="github-icon" class="fa-brands fa-github"></i></li>
-          </ul>
+          <div id="move">
+            <div id="left-blur"></div>
+            <ul class="icon-menu">
+              <li><i id="html-icon" class="fab fa-html5"></i></li>
+              <li><i id="css-icon" class="fab fa-css3-alt"></i></li>
+              <li><i id="js-icon" class="fab fa-js"></i></li>
+              <li><i id="react-icon" class="fab fa-react"></i></li>
+              <li><i id="github-icon" class="fa-brands fa-github"></i></li>
+            </ul>
+            <ul class="icon-menu">
+              <li><i id="html-icon" class="fab fa-html5"></i></li>
+              <li><i id="css-icon" class="fab fa-css3-alt"></i></li>
+              <li><i id="js-icon" class="fab fa-js"></i></li>
+              <li><i id="react-icon" class="fab fa-react"></i></li>
+              <li><i id="github-icon" class="fa-brands fa-github"></i></li>
+            </ul>
+            <div id="right-blur"></div>
+          </div>
         </div>
       </div>
       <!-- services container -->
@@ -291,8 +302,13 @@
         <!-- project 3 =============================================================================================== -->
         <div id="project-3" class="card">
           <div class="proj-main-cont" id="proj-3-main-cont">
-            <i class="fas fa-tools" id="Working" data-aos="fade-up"></i>
-            <h1 data-aos="fade-up">Working On!</h1>
+            <i
+              class="fas fa-tools"
+              id="Working"
+              data-aos="fade-up"
+              class="expand"
+            ></i>
+            <h1 data-aos="fade-up" class="expand">Working On!</h1>
           </div>
         </div>
         <!-- project 3 ends here =============================================================================================== -->
@@ -305,7 +321,7 @@
               data-aos-delay="1000"
             ></div>
             <i class="fas fa-hourglass-half"></i>
-            <h1 data-aos="fade-up">Coming Soon...</h1>
+            <h1 data-aos="fade-up" class="expand">Coming Soon...</h1>
           </div>
         </div>
         <!-- project 4 ends here =============================================================================================== -->
@@ -317,8 +333,8 @@
               data-aos="fade-right"
               data-aos-delay="1000"
             ></div>
-            <i class="fas fa-hourglass-half"></i>
-            <h1 data-aos="fade-up">Coming Soon...</h1>
+            <i class="fas fa-hourglass-half" data-aos="fade-up"></i>
+            <h1 class="expand" data-aos="fade-up">Coming Soon...</h1>
           </div>
         </div>
         <!-- project 5 =============================================================================================== -->
@@ -331,7 +347,7 @@
               data-aos-delay="1000"
             ></div>
             <i class="fas fa-hourglass-half"></i>
-            <h1 data-aos="fade-up">Coming Soon...</h1>
+            <h1 data-aos="fade-up" class="expand">Coming Soon...</h1>
           </div>
         </div>
         <!-- project 6 =============================================================================================== -->
@@ -350,7 +366,7 @@
         </div>
         <!-- quick links -->
         <div id="quick-links">
-          <h3 style="margin-bottom: 0">Quick Links</h3>
+          <h3>Quick Links</h3>
           <ul id="quick-links">
             <li><a href="#content" class="quick-link">Home</a></li>
             <li><a href="#about" class="quick-link">About</a></li>
@@ -396,7 +412,7 @@
         </div>
         <!-- copy rights -->
         <div id="copy-rights">
-          <p>My Portfolio &copy; 2025</p>
+          <p>My Portfolio&copy; 2025</p>
         </div>
       </div>
       <!-- footer ends here ============================================================================== -->

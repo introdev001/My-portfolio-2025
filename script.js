@@ -27,7 +27,6 @@ let themeSwitcherbtn = document.querySelector("#theme-switcher");
 // side theme switcher btn
 let sidethemeSwitcherBtn = document.querySelector("#side-theme-switcher");
 let expand = document.querySelectorAll(".expand");
-
 // circle follower logic
 body.addEventListener("mousemove", (e) => {
   let X = e.clientX;
