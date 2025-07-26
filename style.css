@@ -12,6 +12,7 @@
   --crds-shad: #2d2d2d;
   --act--icon: #ffc107;
   --sexy-hover: #000;
+  --blurMove-ani: rgb(31, 31, 31);
 }
 /* light theme colors */
 body.light-theme {
@@ -26,6 +27,7 @@ body.light-theme {
   --btn-text: #ffffff;
   --crds-shad: #ffffff;
   --sexy-hover: #7c4dff;
+  --blurMove-ani: rgb(200 232 255);
 }
 /* universal selector */
 * {
@@ -75,20 +77,6 @@ body.hide-scroll::-webkit-scrollbar {
   pointer-events: none;
   transform: translate(-50%, -50%);
   z-index: 9998;
-}
-/* pirece through */
-#pirece-through {
-  width: 60%;
-  height: 1px;
-  mix-blend-mode: difference;
-  position: absolute;
-  background-color: white;
-  border-radius: 50%;
-  left: 70px;
-  top: 220px;
-}
-.coming-soon {
-  position: relative;
 }
 /* nav */
 nav {
@@ -284,6 +272,11 @@ nav a:hover {
   width: 100%;
   animation: move 5s linear infinite;
   padding: 4em;
+  min-height: 100px;
+  margin-bottom: 30px;
+}
+.icon-menu i {
+  font-size: 4rem;
 }
 #move {
   width: 100%;
@@ -296,7 +289,7 @@ nav a:hover {
   position: absolute;
   right: 0;
   bottom: 50px;
-  background: linear-gradient(to right, transparent, rgb(31, 31, 31));
+  background: linear-gradient(to right, transparent, var(--blurMove-ani));
   width: 50px;
   height: 60%;
 }
@@ -304,7 +297,7 @@ nav a:hover {
   position: absolute;
   left: 0;
   bottom: 50px;
-  background: linear-gradient(to left, transparent, rgb(31, 31, 31));
+  background: linear-gradient(to left, transparent, var(--blurMove-ani));
   width: 50px;
   height: 60%;
 }
@@ -897,13 +890,14 @@ h5 {
 .card {
   background-color: var(--nav-bg);
   border-radius: 8px;
-  height: 400px;
   min-height: 400px;
   overflow: clip;
   transition: all 0.5s;
 }
-.card:hover {
-  box-shadow: 0 0 20px var(--crds-shad);
+@media (hover: hover) {
+  .card:hover {
+    box-shadow: 0 0 20px var(--crds-shad);
+  }
 }
 .card img {
   width: 100%;
@@ -926,6 +920,7 @@ h5 {
   flex-direction: column;
   gap: 15px;
   width: 100%;
+  margin-bottom: 60px;
 }
 .proj-info-first i {
   font-size: 0.8rem;
@@ -940,31 +935,17 @@ h5 {
 .proj-info-btns a {
   text-decoration: none;
   color: currentColor;
-  padding: 10px 10px;
+  transition: all 0.5s ease !important;
+  padding: 10px 20px;
   border-radius: 50px;
-  border: 1px solid var(--sec-text);
+  border: 3px solid var(--ace-co);
   font-size: 0.7rem;
   position: relative;
   z-index: 1;
   overflow: clip;
 }
-.proj-info-btns a:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 120%;
-  width: 100%;
-  z-index: -1;
-  transform: translateY(100%);
-  background-color: var(--sexy-hover);
-  border-radius: 50% 50% 0px 0px;
-  transition: all 0.5s;
-}
-.proj-info-btns a:hover:after {
-  transform: translateY(-10%);
-}
 .proj-info-btns a:hover {
+  background-color: var(--sexy-hover);
   color: white;
 }
 .proj-img-cont {
@@ -1084,6 +1065,7 @@ h5 {
   /* about me */
   #about-cont {
     font-size: 12px;
+    flex-direction: column;
   }
   #about-me {
     width: 60%;
@@ -1098,10 +1080,16 @@ h5 {
     font-size: 4em;
     animation: none;
   }
+  #social-menu {
+    padding: 0px;
+  }
   /* tect used  sections's icons */
   .icon-menu i {
     font-size: 4rem;
     animation: none;
+  }
+  .proj-info-btns a {
+    background-color: var(--sexy-hover);
   }
   /* services */
   #services {
@@ -1144,6 +1132,16 @@ h5 {
   .projects i {
     font-size: 1.5em;
   }
+  /* removing animations for tech i used section and removing extra icons used for animating */
+  #icon-menu-2,
+  #left-blur,
+  #right-blur {
+    display: none;
+  }
+  .icon-menu {
+    animation: none;
+    padding: 0px;
+  }
   /* footer */
   footer {
     animation: none;
@@ -1151,7 +1149,8 @@ h5 {
     padding: 10px;
   }
   #img-cont {
-    width: 250px;
+    width: 80%;
+    height: auto;
   }
 }
 /* mobile(lager one's) */
@@ -1204,6 +1203,9 @@ h5 {
     height: auto;
     margin-top: 5em;
   }
+  .proj-info-btns a {
+    background-color: var(--sexy-hover);
+  }
   /* welcome text */
   #wel-cont {
     display: none;
@@ -1238,6 +1240,9 @@ h5 {
   .icon-menu i {
     font-size: 4rem;
     animation: none;
+  }
+  .icon-menu {
+    padding: 1em;
   }
   #card1,
   #card2,
@@ -1309,6 +1314,9 @@ h5 {
     display: flex;
     align-items: center;
   }
+  .icon-menu {
+    padding: 2em;
+  }
   /* services */
   #services {
     font-size: 13px;
@@ -1317,6 +1325,7 @@ h5 {
   /* view live & hire me */
   .proj-info-btns a {
     font-size: 0.8rem;
+    background-color: var(--sexy-hover);
   }
   /* cards icons*/
   .cards i {
@@ -1330,7 +1339,7 @@ h5 {
   /* footer */
   footer {
     font-size: 0.7rem;
-    animation-range: entry 0% cover 20%;
+    animation-range: entry 0% cover 15%;
   }
   /* projects cont */
   #projects-cont {
@@ -1343,6 +1352,9 @@ h5 {
   /* projects icons */
   .projects i {
     font-size: 1.2rem;
+  }
+  .icon-menu {
+    padding: 1em;
   }
 }
 /* Small laptop  */
@@ -1386,13 +1398,13 @@ h5 {
   /* footer */
   footer {
     font-size: 1rem;
-    animation-range: entry 0% cover 25%;
+    animation-range: entry 0% cover 15%;
   }
 }
 @media screen and (min-width: 964px) and (max-width: 1024px) {
   /* html */
   html {
-    font-size: 11px;
+    font-size: 15px;
   }
   footer {
     animation-range: entry 0% cover 15%;

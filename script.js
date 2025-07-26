@@ -91,6 +91,7 @@ sideBarlinks.forEach((link) => {
     sideBar.classList.toggle("side-active");
     navBtn.classList.toggle("activeX");
     sideChatbtn.classList.toggle("slideinbomp");
+    sidethemeSwitcherBtn.classList.remove("slideinbomp");
     sideHomelink.classList.toggle("appear");
     sideBarlinks.forEach((link) => {
       link.classList.toggle("appear");
@@ -102,6 +103,7 @@ sideHomelink.addEventListener("click", () => {
   navBtn.classList.remove("activeX");
   sideHomelink.classList.remove("appear");
   sideChatbtn.classList.remove("slideinbomp");
+  sidethemeSwitcherBtn.classList.remove("slideinbomp");
   sideBarlinks.forEach((link) => {
     link.classList.remove("appear");
   });
